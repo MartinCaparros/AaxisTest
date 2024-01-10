@@ -1,0 +1,18 @@
+{% extends "./dashboard.html.twig" %}
+
+{% block body %}
+    {% if product %}
+        <div class="sm:w-3/5 w-4/5 mx-auto">
+            <h1 class="pt-20 sm:text-5xl md:text-7xl text-4xl font-bold text-center">
+                {{ product.productName }}
+            </h1>
+            <p class="text-xl py-6">
+                {{ product.description }}
+            </p>
+        </div>
+    {% else %}
+        <div>
+            <h1> The product is out of stock </h1>
+        </div>
+    {% endif %}
+{% endblock %}
